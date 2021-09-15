@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    background-image: url("../img/header-field.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-btn {
+    width: 60%;
+    margin: 10% auto;
+    padding: .5rem 2rem;
+    color: rgba(0, 0, 0, .3);
+    font-size: 2rem;
+    border-radius: .6rem;
+    display: block;
+    box-sizing: border-box;
+    transition: 
+        color .5s,
+        background-color 4s
+}
+
+.main-btn:hover {
+    color: #fff;
+    background-color: rgb(120, 2, 255);
+}
+
+.ball {
+    width: 18%;
+    height: auto;
+    margin-left: -20%;
+    position: absolute;
+    bottom: 12%;
+    animation: rotate 2s infinite linear, roll 5s alternate infinite ease-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes roll {
+    from {
+        margin-left: -20%;
+    }
+    
+    50% {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: -20%;
+    }
+}
